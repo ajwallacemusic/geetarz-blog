@@ -52,14 +52,14 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow: {subheading} ? 'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px' : null,
-            backgroundColor: {subheading} ? 'orangered' : null,
+            boxShadow: subheading.text ? 'subheading.backgroundcolor 0.5rem 0px 0px, subheading.backgroundcolor -0.5rem 0px 0px' : null,
+            backgroundColor: subheading.text ? subheading.backgroundcolor : null,
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
           }}
         >
-            {subheading}
+            {subheading.text}
         </h3>
       </div>
     </div>
@@ -117,7 +117,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
+  subheading: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -166,7 +166,10 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
+        subheading {
+            text
+            backgroundcolor
+        }
         mainpitch {
           title
           description
