@@ -1,10 +1,10 @@
 ---
 templateKey: index-page
 title: Great coffee with a conscience
-image: /img/chemex.jpg
+image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
 subheading:
-  backgroundcolor: orangered
+  backgroundcolor: black
   text: test
 mainpitch:
   title: Why Kaldi
