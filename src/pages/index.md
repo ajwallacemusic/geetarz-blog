@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
+image: /img/chemex.jpg
 heading: Great coffee with a conscience
 subheading:
   backgroundcolor: orangered
