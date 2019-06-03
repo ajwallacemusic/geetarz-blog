@@ -89,7 +89,7 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  imagetext: PropTypes.string,
+  imagetext: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -125,7 +125,10 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        imagetext
+        imagetext {
+          text
+          backgroundcolor
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

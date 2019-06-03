@@ -2,8 +2,8 @@
 templateKey: 'index-page'
 image: /img/jumbotron.jpg
 imagetext:
-    text: Great coffee with a conscience
-    backgroundcolor: red 
+  text: Great coffee with a conscience
+  backgroundcolor: red
 ---
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
