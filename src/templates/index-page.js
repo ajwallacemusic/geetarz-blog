@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({
         }}
       >
         <h1
-          className="is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          className="has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             backgroundColor: imagetext.text ? imagetext.backgroundcolor : 'white',
             color: 'white',
