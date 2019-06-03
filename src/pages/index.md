@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-image: /img/blog-index.jpg
+image: /img/home-jumbotron.jpg
 imagetext:
   backgroundcolor: transparent
   text: Great coffee with a kick and a punch and some more stuff.
