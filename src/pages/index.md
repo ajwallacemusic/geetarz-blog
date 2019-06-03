@@ -1,13 +1,7 @@
 ---
 templateKey: 'index-page'
-title: Great coffee with a conscience
 image: /img/jumbotron.jpg
-heading: Great coffee with a conscience
-subheading:
-  backgroundcolor: black
-  text: test
-mainpitch:
-  title: Why Kaldi
+imagetext: Great coffee with a conscience
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans
