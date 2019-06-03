@@ -17,7 +17,7 @@ export const IndexPageTemplate = ({
         className="full-width-image margin-top-0"
         style={{
             backgroundImage: `url(${
-                !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+                !!image ? image.childImageSharp.fluid.src : image
                 })`,
             backgroundPosition: `top left`,
             backgroundAttachment: `fixed`,
@@ -36,7 +36,7 @@ export const IndexPageTemplate = ({
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow: !!imagetext.background ? 'imagetext.backgroundcolor 0.5rem 0px 0px, imagetext.backgroundcolor -0.5rem 0px 0px' : 'none',
+            boxShadow: !!imagetext ? 'imagetext.backgroundcolor 0.5rem 0px 0px, imagetext.backgroundcolor -0.5rem 0px 0px' : 'none',
             backgroundColor: 'rgb(255, 68, 0)',
             color: 'white',
             lineHeight: '1',
