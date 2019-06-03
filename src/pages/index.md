@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-image: /img/home-jumbotron.jpg
+image: /img/chemex.jpg
 imagetext:
   backgroundcolor: red
   text: Great coffee with a conscience
