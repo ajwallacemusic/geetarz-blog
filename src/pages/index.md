@@ -2,8 +2,8 @@
 templateKey: index-page
 image: /img/blog-index.jpg
 imagetext:
-  backgroundcolor: red
-  text: Great coffee with a kick
+  backgroundcolor: transparent
+  text: Great coffee with a kick and a punch and some more stuff.
 description: Test
 intro:
   blurbs:
