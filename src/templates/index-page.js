@@ -23,16 +23,7 @@ export const IndexPageTemplate = ({
             backgroundAttachment: `fixed`,
         }}
     >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
+      <div>
         <h1
           className="has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
