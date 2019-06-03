@@ -3,7 +3,7 @@ templateKey: index-page
 image: /img/blog-index.jpg
 imagetext:
   backgroundcolor: red
-  text: Great coffee with a conscience
+  text: Great coffee with a kick
 description: Test
 intro:
   blurbs:
