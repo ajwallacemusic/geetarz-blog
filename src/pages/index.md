@@ -6,6 +6,9 @@ imagetext:
   text: Great coffee with a conscience
 description: Test
 intro:
+  blurbs:
+    - image: /img/coffee-gear.png
+      text: test blurb
   description: Test
   heading: Test
 main:
