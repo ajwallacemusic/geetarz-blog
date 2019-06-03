@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-image: /img/chemex.jpg
+image: /img/blog-index.jpg
 imagetext:
   backgroundcolor: red
   text: Great coffee with a conscience
