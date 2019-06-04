@@ -10,8 +10,6 @@ export const IndexPageTemplate = ({
   image,
   imagetext,
   description,
-  main,
-  intro,
 }) => (
   <div>
     
@@ -91,11 +89,7 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   imagetext: PropTypes.object,
-  description: PropTypes.string,
-  main: PropTypes.object,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  description: PropTypes.object,
 }
 
 const IndexPage = ({ data }) => {
@@ -107,8 +101,6 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         imagetext={frontmatter.imagetext}
         description={frontmatter.description}
-        main={frontmatter.main}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -139,27 +131,9 @@ export const pageQuery = graphql`
             }
           }
         }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
+        description {
           heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-          }
+          text
         }
       }
     }
