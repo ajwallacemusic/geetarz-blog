@@ -9,7 +9,7 @@ import BlogRoll from '../components/BlogRoll'
 export const IndexPageTemplate = ({
   image,
   imagetext,
-  description,
+  main,
 }) => (
   <div>
     
@@ -52,7 +52,7 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
-                    <h2 className="is-size-2">{description}</h2>
+                    <h2 className="is-size-2">{main.heading}</h2>
                   </div>
                 </div>
                 {/* <Features gridItems={intro.blurbs} /> */}
@@ -85,7 +85,7 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   imagetext: PropTypes.object,
-  description: PropTypes.object,
+  main: PropTypes.object,
 }
 
 const IndexPage = ({ data }) => {
@@ -96,7 +96,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         imagetext={frontmatter.imagetext}
-        description={frontmatter.description}
+        main={frontmatter.main}
       />
     </Layout>
   )
@@ -114,7 +114,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
       frontmatter {
         imagetext {
           text
@@ -127,7 +127,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        description {
+        main {
           heading
           text
         }
