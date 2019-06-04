@@ -4,7 +4,9 @@ image: /img/home-jumbotron.jpg
 imagetext:
   backgroundcolor: transparent
   text: Great coffee with a kick and a punch and some more stuff.
-description: Test
+description: 
+  heading: Test Heading
+  text: Lorem ipsum la de da da da
 intro:
   blurbs:
     - image: /img/coffee-gear.png

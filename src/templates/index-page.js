@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
+//import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
@@ -54,10 +54,6 @@ export const IndexPageTemplate = ({
                   <div className="column is-12">
                     <h2 className="is-size-2">{description}</h2>
                   </div>
-                </div>
-                <div>
-                  <h4>{main.heading}</h4>
-                  <p>{main.description}</p>
                 </div>
                 {/* <Features gridItems={intro.blurbs} /> */}
                 <div className="columns">
