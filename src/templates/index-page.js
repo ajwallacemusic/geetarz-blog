@@ -10,20 +10,28 @@ export const IndexPageTemplate = ({
   image,
   imagetext,
   description,
+  main,
   intro,
 }) => (
   <div>
-    <div
+    
+    <div className="full-width-image margin-top-0"
+    style={{
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,
+        backgroundPosition: `top left`,
+        backgroundAttachment: `fixed`,
+    }}
+>
+<div 
         className="full-width-image margin-top-0"
         style={{
-            backgroundImage: `url(${
-                !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-                })`,
+            background: 'rgba(0, 0, 0, 0.25)',
             backgroundPosition: `top left`,
-            backgroundAttachment: `fixed`,
+            //backgroundAttachment: `fixed`,
         }}
     >
-      <div>
+      <div columns>
+      <div column is-1>
         <h1
           className="has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
@@ -36,17 +44,22 @@ export const IndexPageTemplate = ({
           {imagetext.text}
         </h1>
       </div>
+      </div>
+      </div>
     </div>
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
-                    <p>{description}</p>
+                    <h2 className="is-size-2">{description}</h2>
                   </div>
+                </div>
+                <div>
+                  <h4>{main.heading}</h4>
+                  <p>{main.description}</p>
                 </div>
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
@@ -69,7 +82,6 @@ export const IndexPageTemplate = ({
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
@@ -80,6 +92,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   imagetext: PropTypes.object,
   description: PropTypes.string,
+  main: PropTypes.object,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -94,6 +107,7 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         imagetext={frontmatter.imagetext}
         description={frontmatter.description}
+        main={frontmatter.main}
         intro={frontmatter.intro}
       />
     </Layout>
@@ -139,6 +153,13 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+        main {
+          heading
+          description
+          image1 {
+            alt
+          }
         }
       }
     }
