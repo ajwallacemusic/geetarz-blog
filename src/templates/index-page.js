@@ -61,7 +61,7 @@ export const IndexPageTemplate = ({
                   <h4>{main.heading}</h4>
                   <p>{main.description}</p>
                 </div>
-                <Features gridItems={intro.blurbs} />
+                {/* <Features gridItems={intro.blurbs} /> */}
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
