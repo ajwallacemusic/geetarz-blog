@@ -53,6 +53,7 @@ export const IndexPageTemplate = ({
                 <div className="columns">
                   <div className="column is-12">
                     <h2 className="is-size-2">{main.heading}</h2>
+                    <p>{main.text}</p>
                   </div>
                 </div>
                 {/* <Features gridItems={intro.blurbs} /> */}
