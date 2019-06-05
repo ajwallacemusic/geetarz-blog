@@ -1,5 +1,6 @@
 @import "~bulma/sass/utilities/initial-variables"
 @import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One|Noto+Sans+KR|Patua+One&display=swap);
+@import url('https://fonts.googleapis.com/css?family=Life+Savers|Oleo+Script|Oleo+Script+Swash+Caps|Vast+Shadow&display=swap');
 
 // Config vars
 // Kaldi logo brand color: #FD461E
@@ -11,18 +12,27 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
+$background: #E4F6F5
+$body-background-color: $background
+
 $family-sans-serif: 'Noto Sans KR'
 $family-serif: 'Patua One'
 $family-display: 'Alfa Slab One'
 $body-family: $family-sans-serif
 $content-heading-weight: $weight-normal
 $body-font-size: 1.15em
+$navbar-background-color: linear-gradient(to right, #90f6ee, #9eedc4, #b9df9d, #d8cd81, #f3b779);
+$navbar-item-hover-background-color: hsla(0, 0%, 4%, 0.3)
+$navbar-item-hover-color: hsl(0, 0%, 4%)
+$navbar-item-color: hsl(0, 0%, 15%)
 
 h1 
   font-family: $family-display
 h2, h3 
   font-family: $family-serif
 
+.navbar
+  background-image: $navbar-background-color
 
 .navbar .navbar-menu
   box-shadow:none
@@ -86,6 +96,7 @@ h2, h3
 .margin-top-0
   margin-top: 0 !important
 
+$navbar-item-img-max-height: 3rem
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/

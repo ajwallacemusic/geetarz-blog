@@ -11,6 +11,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         image={data.image}
         imagetext={data.imagetext}
         description={data.description}
+        main={data.main}
       />
     )
   } else {
