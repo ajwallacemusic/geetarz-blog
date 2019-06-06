@@ -11,7 +11,7 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="is-parent column is-6" key={node.id}>
             <article
               className={`blog-list-item tile is-child box notification ${
-                node.frontmatter.featuredpost ? 'is-featured' : ''
+                node.frontmatter.featuredpost ? '' : ''
               }`}
             >
               <header>
@@ -34,7 +34,7 @@ const FeatureGrid = ({ gridItems }) => (
                   >
                     {node.frontmatter.title}
                   </Link>
-                  <span> &bull; </span>
+                  <span> </span>
                   <span className="subtitle is-size-5 is-block">
                     {node.frontmatter.date}
                   </span>
