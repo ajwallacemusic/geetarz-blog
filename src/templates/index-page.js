@@ -3,14 +3,13 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
+import FeaturedPosts from '../components/FeaturedPosts'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
   imagetext,
   main,
-  featured
 }) => (
   <div>
     
@@ -62,13 +61,13 @@ export const IndexPageTemplate = ({
                   <h3 className="has-text-weight-normal is-size-2">
                     Featured
                   </h3>
-                  <Features gridItems={featured} />
+                  <FeaturedPosts />
                   </div>
                 </div>
                 <div className="columns">
                 <div className="column is-12">
                   <h3 className="has-text-weight-normal is-size-2">
-                    Latest Stories
+                    Latest
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
@@ -91,12 +90,10 @@ IndexPageTemplate.propTypes = {
   imagetext: PropTypes.object,
   main: PropTypes.object,
   excerpt: PropTypes.string,
-  featured: PropTypes.object
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const {edges} = data.allMarkdownRemark
 
   return (
     <Layout>
@@ -104,7 +101,6 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         imagetext={frontmatter.imagetext}
         main={frontmatter.main}
-        featured={edges}
       />
     </Layout>
   )
@@ -114,16 +110,8 @@ IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
-    }),
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.shape({
-        node: PropTypes.shape({
-          excerpt: PropTypes.string,
-          frontmatter: PropTypes.object
-        })
-      })
     })
-  }),
+  })
 }
 
 export default IndexPage
@@ -165,30 +153,6 @@ export const pageQuery = graphql`
         main {
           heading
           text
-        }
-      }
-    }
-    allMarkdownRemark(filter: {frontmatter: {featuredpost: {eq: true}}}) {
-      edges {
-        node {
-          excerpt
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-            featuredpost
-            featuredimage {
-              childImageSharp {
-                fluid(maxWidth: 1090, quality: 50) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
         }
       }
     }

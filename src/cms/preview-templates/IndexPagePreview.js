@@ -11,6 +11,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         image={data.image}
         imagetext={data.imagetext}
         featured={data.featured}
+        gridItems={data.gridItems}
         main={data.main}
       />
     )
