@@ -6,7 +6,7 @@ imagetext:
   backgroundcolor: black
   text: Latest Posts
 main:
-  heading: Test Heading
+  heading: BLogz
   text: Lorem ipsum la de da da da
 ---
 
