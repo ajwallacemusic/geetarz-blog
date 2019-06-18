@@ -42,7 +42,7 @@ const Navbar = class extends React.Component {
       >
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={geetarzLogo} alt="Kaldi"/>
+              <img src={geetarzLogo} alt="Geetarz"/>
             </Link>
             {/* Hamburger menu */}
             <div
@@ -79,7 +79,7 @@ const Navbar = class extends React.Component {
               </Link>
               <a
                 className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                href="https://github.com/ajwallacemusic/geetarz-blog"
                 target="_blank"
                 rel="noopener noreferrer"
               >
