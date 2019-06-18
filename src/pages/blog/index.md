@@ -1,7 +1,6 @@
 ---
 templateKey: blog-page
-path: /blog
-image: /img/home-jumbotron.jpg
+image: /img/blog-index.jpg
 imagetext:
   backgroundcolor: black
   text: Latest Posts
