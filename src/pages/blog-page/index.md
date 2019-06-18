@@ -1,5 +1,6 @@
 ---
 templateKey: index-page
+path: /blog
 image: /img/home-jumbotron.jpg
 imagetext:
   backgroundcolor: black
