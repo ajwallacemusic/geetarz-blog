@@ -26,7 +26,7 @@ export const BlogPageTemplate = ({
               padding: '1rem',
             }}
           >
-            {imagetext}
+            {imagetext.text}
           </h1>
         </div>
         <section className="section">
