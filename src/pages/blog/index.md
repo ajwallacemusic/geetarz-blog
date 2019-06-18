@@ -1,5 +1,5 @@
 ---
-templateKey: index-page
+templateKey: blog-page
 image: /img/home-jumbotron.jpg
 imagetext:
   backgroundcolor: black
